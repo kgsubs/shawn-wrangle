@@ -4,23 +4,17 @@ Turn any goal, messy or clean, into a results-focused prompt kit that gets it do
 
 ## What it does
 
-Paste your goal in one message. Rough notes, a structured brief, links, files, a voice-memo transcript, whatever you have. shawn-wrangle figures out what needs to happen and in what order, then builds you a kit you can actually run.
+Paste your goal. Rough notes, a brief, files, links, a transcript, whatever you have.
 
-Three tests make sure every step earns its place:
+shawn-wrangle reads it and checks every proposed step against three questions: does it produce exactly one thing? does it depend on something unresolved? is it secretly two tasks joined by "and also"? Anything that fails gets split or sequenced correctly.
 
-- **Single-output test:** if a prompt would produce two things, it splits into two prompts
-- **Prior-resolution test:** if a step depends on an unknown, that unknown becomes its own earlier step
-- **Scope-creep test:** every "and also" and "as well as" is a hidden second task; each one gets its own prompt
-
-Before building anything, it shows you a plain-English plan: what each prompt produces, what model it uses, what it depends on. You approve or edit, then it builds.
-
-Each prompt in the kit has a role, explicit inputs, a single scoped task, a hard scope boundary, and a named output. Run them yourself, or have shawn-wrangle run them for you inside Claude Code.
+Then it shows you a plain-English plan before building anything: what each prompt produces, what model it uses, what depends on what. You approve or edit, then it builds.
 
 **Three ways to run:**
 
-- **BUILD:** delivers the kit and a step-by-step guide for running each prompt yourself. Works in Claude Code and Claude Chat.
+- **BUILD:** delivers the kit with a step-by-step guide for running each prompt yourself. Works in Claude Code and Claude Chat.
 - **BUILD-RUN:** runs the kit in Claude Code, pausing for your approval after each group. Claude Code only.
-- **BUILD-RUN-AUTO:** runs end-to-end, validates each output, halts and reports on any failure. Claude Code only.
+- **BUILD-RUN-AUTO:** runs end-to-end, validates each output, halts and reports on failure. Claude Code only.
 
 After a BUILD-RUN or BUILD-RUN-AUTO run, it offers to save the kit as a reusable skill.
 
