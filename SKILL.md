@@ -1,5 +1,5 @@
 ---
-name: shawn-wrangle
+name: shawn-nuclear
 description: "Decompose a goal into a numbered multi-step prompt kit."
 ---
 
