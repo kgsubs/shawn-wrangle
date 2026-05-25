@@ -18,7 +18,7 @@ Each prompt in the kit has a role, explicit inputs, a single scoped task, a hard
 
 **Three ways to run:**
 
-- **BUILD:** delivers the kit and a step-by-step guide for running each prompt yourself in claude.ai. Works in Claude Code and claude.ai.
+- **BUILD:** delivers the kit and a step-by-step guide for running each prompt yourself. Works in Claude Code and Claude Chat.
 - **BUILD-RUN:** runs the kit in Claude Code, pausing for your approval after each group. Claude Code only.
 - **BUILD-RUN-AUTO:** runs end-to-end, validates each output, halts and reports on any failure. Claude Code only.
 
@@ -30,7 +30,7 @@ After a BUILD-RUN or BUILD-RUN-AUTO run, it offers to save the kit as a reusable
 
 - [Claude Code](https://claude.ai/code)
 
-**claude.ai:**
+**Claude Chat:**
 
 - Pro, Max, Team, or Enterprise plan
 - Code execution enabled in your account
@@ -45,13 +45,13 @@ git clone https://github.com/kgsubs/shawn-wrangle ~/.claude/skills/shawn-wrangle
 
 Claude Code loads skills from `~/.claude/skills/` automatically on next launch.
 
-**claude.ai:**
+**Claude Chat:**
 
 1. Download this repo as a zip file (Code > Download ZIP on GitHub)
 2. Go to Settings > Features > Skills
 3. Upload the zip file
 
-Skills installed in Claude Code and claude.ai are separate and do not sync.
+Skills installed in Claude Code and Claude Chat are separate and do not sync.
 
 **Use it:**
 
