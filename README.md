@@ -1,10 +1,12 @@
 # shawn-wrangle
 
-Decompose any goal, messy or clean, into a results-focused Prompt Kit: numbered prompts pointed at specific outputs, in the right order, each assigned to the cheapest model that can do the job.
+Turn any goal, messy or clean, into a results-focused prompt kit that gets it done: numbered prompts pointed at specific outputs, in the right order, each assigned to the cheapest model that can do the job.
 
 ## What it does
 
-Paste your goal in one message. Rough notes, a structured brief, links, files, a voice-memo transcript, whatever you have. shawn-wrangle extracts what it needs and applies three tests to make sure every step in the kit earns its place:
+Paste your goal in one message. Rough notes, a structured brief, links, files, a voice-memo transcript, whatever you have. shawn-wrangle figures out what needs to happen and in what order, then builds you a kit you can actually run.
+
+Three tests make sure every step earns its place:
 
 - **Single-output test:** if a prompt would produce two things, it splits into two prompts
 - **Prior-resolution test:** if a step depends on an unknown, that unknown becomes its own earlier step
@@ -53,7 +55,7 @@ write a mix brief for my collaborator, figure out distribution, write a press
 bio. i have no idea what i'm doing, budget is zero.
 ```
 
-shawn-wrangle extracts five workstreams, flags what blocks what (sonic vision before mix brief; completion status before sequencing), and produces a kit of 8 prompts pointed at concrete deliverables. Haiku handles track status extraction; sonnet handles everything requiring judgment.
+shawn-wrangle extracts five workstreams, flags what blocks what (sonic vision before mix brief; completion status before sequencing), and produces a kit of 8 prompts each pointed at a concrete deliverable. Haiku handles track status extraction; sonnet handles everything requiring judgment.
 
 **Structured brief, business context:**
 
