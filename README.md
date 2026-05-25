@@ -67,9 +67,15 @@ Or describe a multi-step goal and it will activate on its own.
 
 ```
 i have an album i've been working on for two years. 14 demos, some basically
-done, some are voice memos with chords on my phone. i need to sequence it,
-write a mix brief for my collaborator, figure out distribution, write a press
-bio. i have no idea what i'm doing, budget is zero.
+done, some are voice memos with chords scribbled on my phone at 2am that i
+can barely read now. the vibe is kind of slow and heavy, post-folk electronic,
+i think, but i honestly struggle to describe it. my friend ana is mixing it
+but she keeps asking me for a mix brief and i don't really know what that
+means or what to put in it. i need to figure out the track order, write
+something useful for her, sort out mastering (no clue), get it on streaming,
+and write a bio for my bandcamp page. i have a google doc with notes and
+half-finished lyrics for each track but it's pretty chaotic. i've never
+released anything before. budget is basically zero.
 ```
 
 shawn-wrangle extracts five workstreams, flags what blocks what (sonic vision before mix brief; completion status before sequencing), and produces a kit of 8 prompts each pointed at a concrete deliverable. Haiku handles track status extraction; sonnet handles everything requiring judgment.
@@ -77,10 +83,14 @@ shawn-wrangle extracts five workstreams, flags what blocks what (sonic vision be
 **Structured brief, business context:**
 
 ```
-We're launching a new product line. I need retail pricing, a margin model
-for our DTC channel, a one-page brief for the contract manufacturer, and a
-competitive positioning summary. I have a cost breakdown and three competitor
-SKU lists.
+We're launching a new personal care product line in Q3. I need retail pricing
+across three channel tiers, a contribution margin model for our DTC channel
+that accounts for CAC and a realistic return rate, a one-page brief for our
+contract manufacturer covering formulation specs and MOQ expectations, and a
+competitive positioning summary for the sales deck. I also need to figure out
+whether we lead with the hero SKU or launch the full range at once. I have a
+cost breakdown by SKU, three competitor price lists scraped last week, and a
+category analysis we commissioned in January. We go to market in 14 weeks.
 ```
 
 shawn-wrangle identifies four workstreams, sequences them so the margin model runs before pricing is set, registers the cost sheet and competitor files as named resources, and produces a 4-prompt kit where every dependency is explicit.
