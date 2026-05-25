@@ -95,17 +95,6 @@ category analysis we commissioned in January. We go to market in 14 weeks.
 
 shawn-wrangle identifies four workstreams, sequences them so the margin model runs before pricing is set, registers the cost sheet and competitor files as named resources, and produces a 4-prompt kit where every dependency is explicit.
 
-## Customization
-
-**Different slash command:** rename the directory and update the `name:` field in `SKILL.md`:
-
-```bash
-mv ~/.claude/skills/shawn-wrangle ~/.claude/skills/wrangle
-# edit SKILL.md: change `name: shawn-wrangle` to `name: wrangle`
-```
-
-**Output path for in-session runs:** kit outputs default to `~/.cache/prompt-mage/runs/`. Edit the working dir in Stage 5b of `SKILL.md` to change it.
-
 ## License
 
 MIT
