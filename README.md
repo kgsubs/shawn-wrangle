@@ -1,24 +1,24 @@
 # shawn-wrangle
 
-Give it a goal — rough notes, a brief, files, links, a voice-memo transcript, whatever — and it builds a focused Prompt Kit: numbered prompts in the right order, each scoped to one task, each assigned to the cheapest model that can do the job correctly.
+Decompose any goal, messy or clean, into a results-focused Prompt Kit: numbered prompts pointed at specific outputs, in the right order, each assigned to the cheapest model that can do the job.
 
 ## What it does
 
-Paste your goal in one message. shawn-wrangle extracts what it needs from whatever you give it, then applies three decomposition tests to break the work into the smallest correct set of steps:
+Paste your goal in one message. Rough notes, a structured brief, links, files, a voice-memo transcript, whatever you have. shawn-wrangle extracts what it needs and applies three tests to make sure every step in the kit earns its place:
 
-- **Single-output test** — if a prompt would produce two things, it splits into two prompts
-- **Prior-resolution test** — if a step depends on an unknown, that unknown becomes its own earlier step
-- **Scope-creep test** — every "and also" and "as well as" is a hidden second task; each one gets its own prompt
+- **Single-output test:** if a prompt would produce two things, it splits into two prompts
+- **Prior-resolution test:** if a step depends on an unknown, that unknown becomes its own earlier step
+- **Scope-creep test:** every "and also" and "as well as" is a hidden second task; each one gets its own prompt
 
-Before building anything, it shows you a plain-English plan: what each prompt does, what model it uses, what it depends on. You approve or edit, then it builds.
+Before building anything, it shows you a plain-English plan: what each prompt produces, what model it uses, what it depends on. You approve or edit, then it builds.
 
-The kit comes out in a standard format — each prompt has a role, explicit inputs, a single scoped task, a hard scope boundary, and an output label. Run them yourself, or have shawn-wrangle run them for you inside Claude Code.
+Each prompt in the kit has a role, explicit inputs, a single scoped task, a hard scope boundary, and a named output. Run them yourself, or have shawn-wrangle run them for you inside Claude Code.
 
 **Three ways to run:**
 
-- **BUILD** — delivers the kit and a step-by-step guide for running each prompt yourself in claude.ai
-- **BUILD-RUN** — runs the kit in Claude Code, pausing for your approval after each group
-- **BUILD-RUN-AUTO** — runs end-to-end, validates each output, halts and reports on any failure
+- **BUILD:** delivers the kit and a step-by-step guide for running each prompt yourself in claude.ai
+- **BUILD-RUN:** runs the kit in Claude Code, pausing for your approval after each group
+- **BUILD-RUN-AUTO:** runs end-to-end, validates each output, halts and reports on any failure
 
 After an in-session run, it offers to save the kit as a reusable skill.
 
@@ -53,7 +53,7 @@ write a mix brief for my collaborator, figure out distribution, write a press
 bio. i have no idea what i'm doing, budget is zero.
 ```
 
-shawn-wrangle extracts five workstreams, flags the dependency chain (sonic vision must be defined before the mix brief; track sequencing can't start until completion status is assessed), and produces a kit of 8 prompts. Haiku handles track status extraction from the notes doc; sonnet handles everything requiring judgment.
+shawn-wrangle extracts five workstreams, flags what blocks what (sonic vision before mix brief; completion status before sequencing), and produces a kit of 8 prompts pointed at concrete deliverables. Haiku handles track status extraction; sonnet handles everything requiring judgment.
 
 **Structured brief, business context:**
 
@@ -64,7 +64,7 @@ competitive positioning summary. I have a cost breakdown and three competitor
 SKU lists.
 ```
 
-shawn-wrangle flags four separate workstreams, sequences them so the margin model runs before pricing is set, registers the cost sheet and competitor files as named resources with step assignments, and builds a 4-prompt kit with explicit dependencies.
+shawn-wrangle identifies four workstreams, sequences them so the margin model runs before pricing is set, registers the cost sheet and competitor files as named resources, and produces a 4-prompt kit where every dependency is explicit.
 
 ## Customization
 
