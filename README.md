@@ -35,7 +35,7 @@ After a BUILD-RUN or BUILD-RUN-AUTO run, it offers to save the kit as a reusable
 - Pro, Max, Team, or Enterprise plan
 - Code execution enabled in your account
 
-## How to install
+## Installation
 
 **Claude Code:**
 
