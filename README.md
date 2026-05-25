@@ -1,22 +1,22 @@
-# shawn-wrangle
+# shawn-nuclear
 
-Turn any goal, messy or clean, into a results-focused prompt kit that gets it done: numbered prompts pointed at specific outputs, in the right order, each assigned to the cheapest model that can do the job.
+One goal, many prompts. Dependency-mapped, model-assigned, and runnable end-to-end in Claude Code.
+
+Works in Claude Code (full execution modes) and Claude Chat (BUILD mode, kit delivered for manual run).
 
 ## What it does
 
-Paste your goal. Rough notes, a brief, files, links, a transcript, whatever you have.
+Paste your goal. Raw notes, a brief, files, links, a transcript -- whatever you have. shawn-nuclear reads it, decomposes it into a sequenced prompt kit, and either hands it to you or runs it.
 
-shawn-wrangle reads it and checks every proposed step against three questions: does it produce exactly one thing? does it depend on something unresolved? is it secretly two tasks joined by "and also"? Anything that fails gets split or sequenced correctly.
+Every proposed step gets checked against three questions: does it produce exactly one thing? does it depend on something unresolved? is it secretly two tasks joined by "and also"? Anything that fails gets split or sequenced correctly. Dependencies are made explicit before anything runs.
 
-Then it shows you a plain-English plan before building anything: what each prompt produces, what model it uses, what depends on what. You approve or edit, then it builds.
+**Three modes:**
 
-**Three ways to run:**
+- **BUILD** -- produces the kit with a step-by-step guide for running each prompt yourself. Claude Code and Claude Chat.
+- **BUILD-RUN** -- runs the kit in Claude Code, pausing for your approval after each group. Claude Code only.
+- **BUILD-RUN-AUTO** -- runs end-to-end, validates each output, halts and reports on failure. Claude Code only.
 
-- **BUILD:** delivers the kit with a step-by-step guide for running each prompt yourself. Works in Claude Code and Claude Chat.
-- **BUILD-RUN:** runs the kit in Claude Code, pausing for your approval after each group. Claude Code only.
-- **BUILD-RUN-AUTO:** runs end-to-end, validates each output, halts and reports on failure. Claude Code only.
-
-After a BUILD-RUN or BUILD-RUN-AUTO run, it offers to save the kit as a reusable skill.
+After BUILD-RUN or BUILD-RUN-AUTO, it offers to save the kit as a reusable skill.
 
 ## Requirements
 
@@ -27,14 +27,14 @@ After a BUILD-RUN or BUILD-RUN-AUTO run, it offers to save the kit as a reusable
 **Claude Chat:**
 
 - Pro, Max, Team, or Enterprise plan
-- Code execution enabled in your account
+- Code execution enabled
 
-## Installation
+## Install
 
 **Claude Code:**
 
 ```bash
-git clone https://github.com/kgsubs/shawn-wrangle ~/.claude/skills/shawn-wrangle
+git clone https://github.com/kgsubs/shawn-nuclear ~/.claude/skills/shawn-nuclear
 ```
 
 Claude Code loads skills from `~/.claude/skills/` automatically on next launch.
@@ -50,10 +50,10 @@ Skills installed in Claude Code and Claude Chat are separate and do not sync.
 **Use it:**
 
 ```
-/shawn-wrangle
+/shawn-nuclear
 ```
 
-Or describe a multi-step goal and it will activate on its own.
+Or describe a multi-step goal and it triggers on natural language.
 
 ## Examples
 
@@ -72,7 +72,7 @@ half-finished lyrics for each track but it's pretty chaotic. i've never
 released anything before. budget is basically zero.
 ```
 
-shawn-wrangle extracts five workstreams, flags what blocks what (sonic vision before mix brief; completion status before sequencing), and produces a kit of 8 prompts each pointed at a concrete deliverable. Haiku handles track status extraction; sonnet handles everything requiring judgment.
+shawn-nuclear extracts five workstreams, flags what blocks what (sonic vision before mix brief; completion status before sequencing), and produces a kit of 8 prompts each pointed at a concrete deliverable. Haiku handles track status extraction; Sonnet handles everything requiring judgment.
 
 **Structured brief, business context:**
 
@@ -87,7 +87,7 @@ cost breakdown by SKU, three competitor price lists scraped last week, and a
 category analysis we commissioned in January. We go to market in 14 weeks.
 ```
 
-shawn-wrangle identifies four workstreams, sequences them so the margin model runs before pricing is set, registers the cost sheet and competitor files as named resources, and produces a 4-prompt kit where every dependency is explicit.
+shawn-nuclear identifies four workstreams, sequences them so the margin model runs before pricing is set, registers the cost sheet and competitor files as named resources, and produces a 4-prompt kit where every dependency is explicit.
 
 ## License
 
